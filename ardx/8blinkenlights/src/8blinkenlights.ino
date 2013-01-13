@@ -1,5 +1,15 @@
-int ledPins = {2,3,4,5,6,7,8,9}		// array to hold the pin for each LED
+int ledPins[] = {2,3,4,5,6,7,8,9};	// array to hold the pin for each LED
 int delayTime = 100;			// time between LED changes
+
+void setup() {
+	for (int i = 0; i < 8; i++) {
+		pinMode(ledPins[i], OUTPUT);
+	}
+}
+
+void loop() {
+	oneAfterAnotherLoop();
+}
 
 void oneAfterAnotherLoop() {
 	for (int i = 0; i < 8; i++) {
@@ -32,14 +42,6 @@ void inAndOut() {
 	for (int i = 0; i < 8; i++) {
 		digitalWrite(ledPins[i], LOW);
 	}
-}
-void setup() {
-	for (int i = 0; i < 8; i++) {
-		pinMode(ledPins[i], OUTPUT);
-	}
-}
 
-void loop() {
-	oneAfterAnotherLoop();
+	delay(delayTime*8);
 }
-

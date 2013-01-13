@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/8blinkenlights.cpp : src/8blinkenlights.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/8blinkenlights.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/8blinkenlights.cpp
+	@true
+
