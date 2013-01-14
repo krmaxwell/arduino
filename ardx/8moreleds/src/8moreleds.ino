@@ -5,9 +5,9 @@ int clock = 3;
 int latch = 4;
 
 void setup() {
-	pinmode(data, OUTPUT);
-	pinmode(clock, OUTPUT);
-	pinmode(latch, OUTPUT);
+	pinMode(data, OUTPUT);
+	pinMode(clock, OUTPUT);
+	pinMode(latch, OUTPUT);
 }
 
 void loop() {
@@ -24,4 +24,4 @@ void updateLEDs(int value) {
 	digitalWrite(latch, LOW);
 	shiftOut(data, clock, MSBFIRST, value);		// shift out 8 bits to shift reg
 	digitalWrite(latch, HIGH);
-	
+}
