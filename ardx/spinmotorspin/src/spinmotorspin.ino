@@ -5,8 +5,8 @@ void setup() {
 }
 
 void loop() {
-	motorOnThenOff();
-	motorOnThenOffWithSpeed();
+	//motorOnThenOff();
+	//motorOnThenOffWithSpeed();
 	motorAcceleration();
 }
 
