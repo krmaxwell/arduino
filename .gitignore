@@ -18,6 +18,7 @@
 
 # Ino stuff
 *.d
+.build
 
 # vim swap file
 *.swp
